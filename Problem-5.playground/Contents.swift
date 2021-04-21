@@ -20,3 +20,5 @@ while true {
 }
 
 print(smallestNumber)
+
+
