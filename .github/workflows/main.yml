@@ -6,7 +6,6 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the develop branch
   pull_request:
-    types: [opened]
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -23,7 +22,7 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         uses: Ilshidur/action-slack@2.0.2
         with:
-          args: "*{{ EVENT_PAYLOAD.sender.login }}* (<@U01UTPNCSUU>) has opened new pull request. 🚀🎉👻\n {{ EVENT_PAYLOAD.pull_request.html_url }}"
+          args: "*{{ EVENT_PAYLOAD.sender.login }}* has opened new pull request. 🚀🎉👻\n {{ EVENT_PAYLOAD.pull_request.html_url }}"
       
       
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
