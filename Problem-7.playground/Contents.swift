@@ -10,7 +10,7 @@ func prime(n: Int) -> Int {
     var number = 3
 
     while(primes.count < n) {
-        if(isPrime(number: number)) {
+        if number.isPrime {
             primes.append(number)
         }
             number += 2
@@ -18,19 +18,19 @@ func prime(n: Int) -> Int {
     return primes.popLast()!
 }
 
-
-func isPrime(number: Int) -> Bool {
-    guard number > 1 else {
-        return false
-    }
-    
-    for i in 2..<number {
-        if number % i == 0 {
+extension Int {
+    var isPrime: Bool {
+        guard self > 1 else {
             return false
         }
+        
+        for i in 2..<self {
+            if self % i == 0 {
+                return false
+            }
+        }
+        return true
     }
-    
-    return true
 }
 
 prime(n: 10001)

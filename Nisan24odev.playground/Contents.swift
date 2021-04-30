@@ -17,7 +17,7 @@ extension Int {
     }
 }
 
-47.isPrime()
+47.isPrime
 
 
 //MARK: ODEV: İki Parametreli ve Farklı tipli bir generic örneği yapınız.
