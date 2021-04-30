@@ -22,7 +22,7 @@ extension Int {
 
 //MARK: ODEV: İki Parametreli ve Farklı tipli bir generic örneği yapınız.
 
-func multipleValues<T: Comparable, S: Comparable>(_ first: T, _ second: S) -> (T,S) {
+func multipleValues<T, S>(_ first: T, _ second: S) -> (T,S) {
     return (first,second)
 }
 
