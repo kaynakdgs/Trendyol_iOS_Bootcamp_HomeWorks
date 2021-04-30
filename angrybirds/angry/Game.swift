@@ -23,12 +23,12 @@ struct Game {
         self.player = Player(name: name)
     }
     
-    mutating func setBottleLocation(d: Double,delta: Double) {
-        if d >= 0.0 && d <= 1500.0 {
-            self.bottle = Bottle(d: d, delta: delta)
+    mutating func setBottleLocation(distance: Double,delta: Double) {
+        if distance >= 0.0 && distance <= 1500.0 {
+            self.bottle = Bottle(distance: distance, delta: delta)
         } else {
             print("d Değeri 0.0 ile 1500.0 arası olmalıdır.")
-            self.bottle = Bottle(d: 0.0, delta: delta)
+            self.bottle = Bottle(distance: 0.0, delta: delta)
         }
     }
     
@@ -44,7 +44,7 @@ struct Game {
     mutating func shot() {
         guard let bottle = bottle,
               let canonBall = canonBall else { return }
-        if canonBall.range >= (bottle.d - bottle.bottleSpace) && canonBall.range <= (bottle.d + bottle.bottleSpace) {
+        if canonBall.range >= (bottle.distance - bottle.bottleSpace) && canonBall.range <= (bottle.distance + bottle.bottleSpace) {
             player?.score += 1
             print("Hit!")
         } else {
@@ -56,7 +56,7 @@ struct Game {
     func showStats() {
         print("Hello \(player?.name ?? "")")
         print("Bottle space = \(bottle?.bottleSpace ?? 0.0)")
-        print("Bottle location = \(bottle?.d ?? 0.0)")
+        print("Bottle location = \(bottle?.distance ?? 0.0)")
         print("Range = \(canonBall?.range ?? 0.0)")
         print("Score = \(player?.score ?? 0)")
     }
@@ -68,7 +68,7 @@ struct Player {
 }
 
 struct Bottle {
-    var d: Double
+    var distance: Double
     var delta: Double
     
     var bottleSpace: Double {
