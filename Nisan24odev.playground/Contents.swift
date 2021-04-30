@@ -3,7 +3,7 @@ import Foundation
 //MARK: ODEV: Girilen sayının asal olup olmadığını bulan bir extension yazınız.
 
 extension Int {
-    func isPrime() -> Bool {
+    var isPrime: Bool {
         guard self > 1 else {
             return false
         }
