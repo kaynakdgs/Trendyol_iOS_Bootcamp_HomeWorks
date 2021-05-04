@@ -25,7 +25,7 @@ final class UserViewController: UIViewController {
 // MARK: Location Protocol
 extension UserViewController: LocationDelegateProtocol {
     func sendLocationUserVc(userLocation: String) {
-        self.showAddressLabel.text = userLocation
+        showAddressLabel.text = userLocation
     }
 }
 

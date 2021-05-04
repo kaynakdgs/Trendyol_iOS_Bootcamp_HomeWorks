@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var addressLbl: UILabel = {
+    lazy var label: UILabel = {
         let label = UILabel()
         label.font = UIFont(name:"Rockwell",size:22)
         label.frame = CGRect(x: 0, y: 0, width: 321, height: 40)
@@ -34,45 +34,45 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         checkLocationServices()
-        navigationBarColor()
+        prepareNavigationBar()
     }
     
     @IBAction func addUserLocation() {
-        if delegate != nil && addressLbl.text != nil {
-            guard let address = addressLbl.text else { return }
+        if delegate != nil && label.text != nil {
+            guard let address = label.text else { return }
             delegate?.sendLocationUserVc(userLocation: address)
             navigationController?.popViewController(animated: true)
         }
     }
     
-    func navigationBarColor() {
+    private func prepareNavigationBar() {
         navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.isTranslucent = true
         navigationController?.view.backgroundColor = .clear
-        navigationItem.titleView = addressLbl
+        navigationItem.titleView = label
     }
     
-    func setupLocationManager() {
+    private func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
     }
     
-    func showUserLocationCenterMap() {
+    private func showUserLocationCenterMap() {
         if let location = locationManager.location?.coordinate {
             let region = MKCoordinateRegion.init(center: location, latitudinalMeters: mapZoom, longitudinalMeters: mapZoom)
             mapView.setRegion(region, animated: true)
         }
     }
     
-    func checkLocationServices() {
+    private func checkLocationServices() {
         if CLLocationManager.locationServicesEnabled() {
             setupLocationManager()
             checkLocationAuthorization()
         }
     }
     
-    func checkLocationAuthorization() {
+    private func checkLocationAuthorization() {
         switch CLLocationManager.authorizationStatus() {
         case .authorizedWhenInUse:
             authorizedWhenInUse()
@@ -90,20 +90,20 @@ class ViewController: UIViewController {
         }
     }
     
-    func authorizedWhenInUse() {
+    private func authorizedWhenInUse() {
         mapView.showsUserLocation = true
         showUserLocationCenterMap()
         locationManager.startUpdatingLocation()
         lastLocation = getCenterLocation(mapView: mapView)
     }
     
-    func getCenterLocation(mapView:MKMapView) -> CLLocation {
+    private func getCenterLocation(mapView:MKMapView) -> CLLocation {
         let latitude = mapView.centerCoordinate.latitude
         let longitude = mapView.centerCoordinate.longitude
         return CLLocation(latitude: latitude, longitude: longitude)
     }
     
-    func showAlert() {
+    private func showAlert() {
         let alert = UIAlertController(title: "Uyarı", message: "Adres seçmek için konum izni vermeniz gerekmektedir.", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Tamam", style: .default) { (action) in
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString),
@@ -142,7 +142,7 @@ extension ViewController: MKMapViewDelegate {
             let streetName = placemark.thoroughfare ?? ""
             DispatchQueue.main.async { [weak self] in
                 guard let self = self else { return }
-                self.addressLbl.text = "\(streetNumber) - \(streetName)"
+                self.label.text = "\(streetNumber) - \(streetName)"
             }
         }
     }

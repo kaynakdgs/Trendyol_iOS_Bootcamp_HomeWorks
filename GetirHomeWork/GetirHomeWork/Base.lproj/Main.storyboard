@@ -41,7 +41,7 @@
                                 </constraints>
                                 <state key="normal" title="Button" image="btn_user"/>
                                 <connections>
-                                    <action selector="addUserLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5d-Ma-2N7"/>
+                                    <action selector="addUserLocation" destination="BYZ-38-t0r" eventType="touchUpInside" id="wfl-wN-4fJ"/>
                                 </connections>
                             </button>
                         </subviews>
