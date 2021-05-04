@@ -7,14 +7,9 @@
 
 import UIKit
 
-class UserViewController: UIViewController, LocationDelegateProtocol  {
+final class UserViewController: UIViewController {
     
-    @IBOutlet weak var showAddressLabel: UILabel!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-    }
+    @IBOutlet weak private var showAddressLabel: UILabel!
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -25,16 +20,21 @@ class UserViewController: UIViewController, LocationDelegateProtocol  {
         super.viewWillDisappear(animated)
         navigationController?.setNavigationBarHidden(false, animated: animated)
     }
-    
+}
+
+// MARK: Location Protocol
+extension UserViewController: LocationDelegateProtocol {
     func sendLocationUserVc(userLocation: String) {
         self.showAddressLabel.text = userLocation
     }
-    
+}
+
+// MARK: Button Actions
+extension UserViewController {
     @IBAction func openMapButton(_ sender: UIButton) {
         
         let mapViewVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MapScreen") as! ViewController
         mapViewVc.delegate = self
         navigationController?.pushViewController(mapViewVc, animated: true)
     }
-    
 }
