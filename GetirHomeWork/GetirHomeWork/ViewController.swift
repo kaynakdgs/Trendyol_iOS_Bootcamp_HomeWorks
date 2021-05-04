@@ -105,7 +105,7 @@ class ViewController: UIViewController {
     }
     
     func showAlert() {
-        let alert = UIAlertController(title: "Uyarı", message: "Adres seçmek konum izni vermeniz gerekmektedir.", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Uyarı", message: "Adres seçmek için konum izni vermeniz gerekmektedir.", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "Tamam", style: .default) { (action) in
             guard let settingsUrl = URL(string: UIApplication.openSettingsURLString) else { return }
             if UIApplication.shared.canOpenURL(settingsUrl) {
