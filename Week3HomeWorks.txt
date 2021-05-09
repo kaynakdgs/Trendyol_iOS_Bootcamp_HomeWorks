@@ -1,0 +1,12 @@
+- Frame vs Bound açıklayınız.
++ Frame SuperView koordinat sistemiyle çalışıyor, Bound View ın kendi içinde bulunan koordinat sistemiyle çalışıyor.
+
+- loadView'ı araştırınız.
++ loadView, UIView nesnesi oluşturur ve başlatır. Doğrudan çağırılmamalıdır, Interface Builder kullanılmıyorsa View oluşturmak için kullanılır.
+
+- UIViewController yaşam döngüsünü araştırıp her bir methodu kendi cümlelerinizle özetleyiniz.
++ ViewDidLoad, tüm IBOutlet'lerin ve ViewController'ın hazır eder.
++ ViewWillAppear, UIViewController'dan hemen önce çağılır. Ekranın görünmesinden önce olmasını istediğimiz işlemler için uygundur.
++ ViewDidAppear, UIViewController geldikten sonra verilerin yüklenmeye başlaması için çağrılır. 
++ ViewWillDisappear, UIViewController ekrandan kaybolmadan önce, farklı bir sayfaya geçileceği zaman çalışır.
++ ViewDidDisappear, UIViewController kaybolduktan sonra arkada çalışmasını istemediğimiz işlemler için kullanılır.
