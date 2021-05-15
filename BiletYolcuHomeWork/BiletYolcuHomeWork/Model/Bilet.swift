@@ -8,11 +8,13 @@
 import UIKit
 
 struct Bilet {
-    let yolcu: Yolcu?
-    let tarih: Tarih?
-    let saat: Saat?
+    var yolcu: Yolcu?
+    var tarih: Tarih?
+    var saat: Saat?
     var koltuk: [Int] = []
     var koltukSayisi: Int
+    var nereden: String?
+    var nereye: String?
     
     var seatList: [Int] = []
     
@@ -65,7 +67,7 @@ struct Bilet {
         }
     }
     
-    private func biletYazdir() {
+    func biletYazdir() {
         guard let yolcu = yolcu,
               let tarih = tarih,
               let saat = saat else { return }

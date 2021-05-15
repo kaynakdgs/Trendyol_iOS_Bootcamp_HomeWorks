@@ -18,6 +18,8 @@
 		0086B24F264296EC00B220C0 /* Saat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086B24E264296EC00B220C0 /* Saat.swift */; };
 		0086B2522642974800B220C0 /* Bilet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0086B2512642974800B220C0 /* Bilet.swift */; };
 		00AB22A72646E0250020F6CC /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AB22A62646E0250020F6CC /* BusViewController.swift */; };
+		00CC7F47264957A800044BF4 /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC7F46264957A800044BF4 /* PopUpViewController.swift */; };
+		00CC7F4C26497D6B00044BF4 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC7F4B26497D6B00044BF4 /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		0086B24E264296EC00B220C0 /* Saat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Saat.swift; sourceTree = "<group>"; };
 		0086B2512642974800B220C0 /* Bilet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bilet.swift; sourceTree = "<group>"; };
 		00AB22A62646E0250020F6CC /* BusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
+		00CC7F46264957A800044BF4 /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
+		00CC7F4B26497D6B00044BF4 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				0086B234264281DD00B220C0 /* SceneDelegate.swift */,
 				0086B236264281DD00B220C0 /* ViewController.swift */,
 				00AB22A62646E0250020F6CC /* BusViewController.swift */,
+				00CC7F46264957A800044BF4 /* PopUpViewController.swift */,
+				00CC7F4B26497D6B00044BF4 /* CustomCollectionViewCell.swift */,
 				0086B238264281DD00B220C0 /* Main.storyboard */,
 				0086B23B264281DF00B220C0 /* Assets.xcassets */,
 				0086B23D264281DF00B220C0 /* LaunchScreen.storyboard */,
@@ -164,10 +170,12 @@
 				0086B237264281DD00B220C0 /* ViewController.swift in Sources */,
 				0086B2522642974800B220C0 /* Bilet.swift in Sources */,
 				00AB22A72646E0250020F6CC /* BusViewController.swift in Sources */,
+				00CC7F47264957A800044BF4 /* PopUpViewController.swift in Sources */,
 				0086B24F264296EC00B220C0 /* Saat.swift in Sources */,
 				0086B233264281DD00B220C0 /* AppDelegate.swift in Sources */,
 				0086B2492642923B00B220C0 /* Yolcu.swift in Sources */,
 				0086B235264281DD00B220C0 /* SceneDelegate.swift in Sources */,
+				00CC7F4C26497D6B00044BF4 /* CustomCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
