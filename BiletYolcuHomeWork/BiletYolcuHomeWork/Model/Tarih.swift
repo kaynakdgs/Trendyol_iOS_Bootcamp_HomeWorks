@@ -8,9 +8,9 @@
 import Foundation
 
 struct Tarih {
-    let gun: Int = 1
-    let ay: Int = 1
-    let yil: Int = 2021
+    var gun: String = "1"
+    var ay: String = "1"
+    var yil: String = "2021"
     
     func yazdir() {
         print("\(gun) / \(ay) / \(yil)")
