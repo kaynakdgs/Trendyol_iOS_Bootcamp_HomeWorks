@@ -8,6 +8,15 @@
 ## CanonBall Bottle App (Angry Birds)
 - Bottle konumunu ayarladıktan sonra Canonball ile hız ve açı vererek vurmaya çalıştığımız uygulamadır.
 
+## CoreData_HomeWork
+- Table view'da CoreData kullanımı.
+
+## ClipToBounds vs MaskToBounds
+- İkisi arasındaki fark.
+
+## TabBar Middle Button
+- TabBar için Orta button'un biraz daha çıkıntılı olması.
+
 ## Project Euler
 - Project Euler 1-8 arası cevapları mevcut.
 
