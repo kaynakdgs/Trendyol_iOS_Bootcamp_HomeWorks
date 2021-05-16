@@ -8,7 +8,7 @@
 ## CanonBall Bottle App (Angry Birds)
 - Bottle konumunu ayarladıktan sonra Canonball ile hız ve açı vererek vurmaya çalıştığımız uygulamadır.
 
-## CoreData_HomeWork
+## CoreData HomeWork
 - Table view'da CoreData kullanımı.
 
 ## ClipToBounds vs MaskToBounds
