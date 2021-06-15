@@ -5,7 +5,7 @@
 ## Getir App
 - Kullanıcı harita ekranından yukarıda adresi görerek seçip ana ekrana gönderebilen uygulamadır.
 
-## CanonBall Bottle App (Angry Birds)
+## CannonBall Bottle App (Angry Birds)
 - Bottle konumunu ayarladıktan sonra Canonball ile hız ve açı vererek vurmaya çalıştığımız uygulamadır.
 
 ## CoreData HomeWork
